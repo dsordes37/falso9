@@ -1,4 +1,5 @@
-const prisma = require('../models/prismaClient');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 async function sortearSelecao(req, res) {
   try {
