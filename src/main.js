@@ -1,10 +1,13 @@
 const express = require('express');
 
 const app = express();
+const temaRoutes = require('./routes/temaRoutes');
 
-const jogadoresRoutes = require('./Routes/jogadoresRoutes');
+const selecaoRoutes = require('./Routes/selecaoRoutes');
 
-app.use('/jogadores', jogadoresRoutes);
+app.use('/tema', temaRoutes);
+
+app.use('/selecao', selecaoRoutes);
 
 app.get('/', (req, res) => {
     res.send("Hello World!");
